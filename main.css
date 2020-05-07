@@ -37,13 +37,17 @@ h1{
 
 .coocomo2-main{
     align-content: center;
-    background-color: #232323;
+   
     margin-top: 100px;
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 .detailedBlock{
     display:none;
-    border-style: dashed;
+}
+
+img {
+    display: block;
 }

@@ -40,42 +40,44 @@
         </div>
 
        <!-- *********************** cocomo 2 ************************************ -->
-        <div class="cocomo2-main">
+       <div class="body-wrapper">
+       <h3>COCOMO II</h3> 
+       <div class="cocomo2-main">
         
             KLOC=<input type="text" id="kloc">
             <br><br>
-            <strong><em>15 Software Cost Drivers</em></strong><br>
+            <strong style="border: solid 2px blue;"><em>15 Software Cost Drivers</em></strong><br>
             <p>
                 <strong>Product Attributes</strong><br>
 
 
                 <label>Requirement software reliability:</label>
                 <select id="cheked">
-                    <option value="0.75">Very low</option>
-                    <option value="0.88">low</option>
+                    <option value="0.75">Very Low</option>
+                    <option value="0.88">Low</option>
                     <option value="1">Nominal</option>
                     <option value="1.15">high</option>
                     <option value="1.40">Very high</option>
-                    <option value="1.50">Extremely high</option>
+                    <!-- <option value="1.50">extra high</option> -->
                 </select>
                 <br>
                 <label for="2">Size of application database</label>
                 <select name="2" id="2">
-                    <option value="0.75">Very low</option>
-                    <option value="0.94">low</option>
+                    <!-- <option value="0.75">Very Low</option> -->
+                    <option value="0.94">Low</option>
                     <option value="1">Nominal</option>
                     <option value="1.08">high</option>
                     <option value="1.16">Very high</option>
-                    <option value="1.30">Extremely high</option>
+                    <!-- <option value="1.30">extra high</option> -->
                 </select><br>
                 <label for="3">Complexity of the product</label>
                 <select name="3" id="3">
-                    <option value="0.75">Very low</option>
-                    <option value="0.85">low</option>
+                    <option value="0.70">Very Low</option>
+                    <option value="0.85">Low</option>
                     <option value="1">Nominal</option>
                     <option value="1.15">high</option>
                     <option value="1.30">Very high</option>
-                    <option value="1.65">Extremely high</option>
+                    <option value="1.65">extra high</option>
                 </select></p>
 
             <p>
@@ -83,39 +85,39 @@
                 <br> 
                 <label for="4">Run-time performance constraints</label>
                 <select name="4" id="4">
-                    <option value="0.75">Very low</option>
-                    <option value="0.88">low</option>
+                    <!-- <option value="0.75">Very Low</option>
+                    <option value="0.88">Low</option> -->
                     <option value="1">Nominal</option>
-                    <option value="1.15">high</option>
-                    <option value="1.40">Very high</option>
-                    <option value="1.50">Extremely high</option>
+                    <option value="1.11">high</option>
+                    <option value="1.30">Very high</option>
+                    <option value="1.66">extra high</option>
                 </select> <br>
                 <label for="5">Memory constraints</label>
                 <select name="5" id="5">
-                    <option value="0.75">Very low</option>
-                    <option value="0.88">low</option>
+                    <!-- <option value="0.75">Very Low</option>
+                    <option value="0.88">Low</option> -->
                     <option value="1">Nominal</option>
-                    <option value="1.15">high</option>
-                    <option value="1.40">Very high</option>
-                    <option value="1.50">Extremely high</option>
+                    <option value="1.06">high</option>
+                    <option value="1.21">Very high</option>
+                    <option value="1.56">extra high</option>
                 </select><br>
                 <label for="6">Volatality of virtual machines environment</label>
                 <select name="6" id="6">
-                    <option value="0.75">Very low</option>
-                    <option value="0.88">low</option>
+                    <!-- <option value="0.75">Very Low</option> -->
+                    <option value="0.87">Low</option>
                     <option value="1">Nominal</option>
                     <option value="1.15">high</option>
-                    <option value="1.40">Very high</option>
-                    <option value="1.50">Extremely high</option>
+                    <option value="1.30">Very high</option>
+                    <!-- <option value="1.50">extra high</option> -->
                 </select><br>
                 <label for="7">Required turnabout time</label>
                 <select name="7" id="7">
-                    <option value="0.75">Very low</option>
-                    <option value="0.88">low</option>
+                    <!-- <option value="0.75">Very Low</option> -->
+                    <option value="0.87">Low</option>
                     <option value="1">Nominal</option>
-                    <option value="1.15">high</option>
-                    <option value="1.40">Very high</option>
-                    <option value="1.50">Extremely high</option>
+                    <option value="1.07">high</option>
+                    <option value="1.15">Very high</option>
+                    <!-- <option value="1.50">extra high</option> -->
                 </select>
             </p>
 
@@ -127,50 +129,50 @@
                 <strong>Personnel Attributes:</strong><br>
                 <label for="8">Analyst capability</label>
                 <select name="8" id="8">
-                    <option value="1.46">Very low</option>
-                    <option value="1.19">low</option>
+                    <option value="1.46">Very Low</option>
+                    <option value="1.19">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.86">high</option>
                     <option value="0.71">Very high</option>
-                    <option value="0.50">Extremely high</option>
+                    <!-- <option value="0.50">extra high</option> -->
                 </select><br>
 
                 <label for="9">Application experience</label>
                 <select name="9" id="9">
-                    <option value="1.29">Very low</option>
-                    <option value="1.13">low</option>
+                    <option value="1.29">Very Low</option>
+                    <option value="1.13">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.91">high</option>
                     <option value="0.82">Very high</option>
-                    <option value="0.50">Extremely high</option>
+                    <!-- <option value="0.50">extra high</option> -->
                 </select><br>
 
                 <label for="10">Software engineering capability</label>
                 <select name="10" id="10">
-                    <option value="1.42">Very low</option>
-                    <option value="1.17">low</option>
+                    <option value="1.42">Very Low</option>
+                    <option value="1.17">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.86">high</option>
-                    <option value="0.71">Very high</option>
-                    <option value="0.50">Extremely high</option>
+                    <option value="0.70">Very high</option>
+                    <!-- <option value="0.50">extra high</option> -->
                 </select><br>
                 <label for="11">Virtual machine exprience</label>
                 <select name="11" id="11">
-                    <option value="1.21">Very low</option>
-                    <option value="1.10">low</option>
+                    <option value="1.21">Very Low</option>
+                    <option value="1.10">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.90">high</option>
-                    <option value="0.71">Very high</option>
-                    <option value="0.50">Extremely high</option>
+                    <!-- <option value="0.71">Very high</option>
+                    <option value="0.50">extra high</option> -->
                 </select><br>
                 <label for="12">Programming language experience</label>
                 <select name="12" id="12">
-                    <option value="1.14">Very low</option>
-                    <option value="1.07">low</option>
+                    <option value="1.14">Very Low</option>
+                    <option value="1.07">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.95">high</option>
-                    <option value="0.71">Very high</option>
-                    <option value="0.50">Extremely high</option>
+                    <!-- <option value="0.71">Very high</option>
+                    <option value="0.50">extra high</option> -->
                 </select><br>
             </p>
 
@@ -179,68 +181,43 @@
                 <strong>Project Attributes</strong><br>
                 <label for="13">Application of software Engineering methods</label>
                 <select name="13" id="13">
-                    <option value="1.24">Very low</option>
-                    <option value="1.10">low</option>
+                    <option value="1.24">Very Low</option>
+                    <option value="1.10">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.91">high</option>
                     <option value="0.82">Very high</option>
-                    <option value="0.50">Extremely high</option>
-                </select>
+                    <!-- <option value="0.50">extra high</option> -->
+                </select><br>
                 <label for="14">Use of software tools</label>
                 <select name="14" id="14">
-                    <option value="1.24">Very low</option>
-                    <option value="1.10">low</option>
+                    <option value="1.24">Very Low</option>
+                    <option value="1.10">Low</option>
                     <option value="1">Nominal</option>
                     <option value="0.91">high</option>
-                    <option value="0.82">Very high</option>
-                    <option value="0.50">Extremely high</option>
-                </select>
+                    <option value="0.83">Very high</option>
+                    <!-- <option value="0.50">extra high</option> -->
+                </select><br>
                 <label for="15">Required developement schedule</label>
                 <select name="15" id="15">
-                    <option value="1.24">Very low</option>
-                    <option value="1.10">low</option>
+                    <option value="1.23">Very Low</option>
+                    <option value="1.08">Low</option>
                     <option value="1">Nominal</option>
-                    <option value="0.91">high</option>
-                    <option value="0.82">Very high</option>
-                    <option value="0.50">Extremely high</option>
+                    <option value="1.04">high</option>
+                    <option value="1.1">Very high</option>
+                    <!-- <option value="0.50">extra high</option> -->
                 </select>
             </p>
-            <button id="showDetail">show more details</button>
-            <div id="detail" class="detailedBlock">
-                <p>requirement software reliability: Very Low= 0.75 Low=0.88 Nominal: 1.00 High= 1.15 Very High= 1.40
-                </p>
-                <p>size of application database: Very Low= 0.00 Low=0.94 Nominal: 1.00 High= 1.08 Very High= 1.16</p>
-                <p>complexity of the product: Very Low= 0.70 Low=0.85 Nominal: 1.00 High= 1.15 Very High= 1.30</p>
-
-
-                <p>run-time performance constraints: Very Low= 0.00 Low=0.00 Nominal: 1.00 High= 1.11 Very High= 1.30
-                </p>
-                <p>memory constraints: Very Low= 0.00 Low=0.00 Nominal: 1.00 High= 1.06 Very High= 1.21</p>
-                <p>volatality of virtual machines environment: Very Low= 0.00 Low=0.87 Nominal: 1.00 High= 1.15 Very
-                    High= 1.30</p>
-                <p>complexity of the product: Very Low= 0.00 Low=0.94 Nominal: 1.00 High= 1.17 Very High= 1.15</p>
-
-
-
-                <p>analyst capability: Very Low= 1.46 Low=1.19 Nominal: 1.00 High= 0.86 Very High= 0.71</p>
-                <p>application experience: Very Low= 1.29 Low=1.13 Nominal: 1.00 High= 0.91 Very High= 0.82</p>
-                <p>software engineering capability: Very Low= 1.42 Low=1.17 Nominal: 1.00 High= 0.86 Very High= 0.70</p>
-                <p>virtual machine experience: Very Low= 1.21 Low=1.10 Nominal: 1.00 High= 0.90 Very High= 0.00</p>
-                <p>programming language experience: Very Low= 1.14 Low=1.07 Nominal: 1.00 High= 0.95 Very High= 0.00</p>
-
-
-                <p>application of software engineering methods: Very Low= 1.24 Low=1.10 Nominal: 1.00 High= 0.91 Very
-                    High= 0.82</p>
-                <p>use of software tools: Very Low= 1.24 Low=1.10 Nominal: 1.00 High= 0.91 Very High= 0.83</p>
-                <p>required development schedule: Very Low= 1.23 Low=1.08 Nominal: 1.00 High= 1.04 Very High= 1.10</p>
-
-            </div>
+            
+            
             <br>
 
-
+             EAF= <input type="text" id="eaf">
             <button id="calEAF">calculate EAF</button>
-            EAF=
-            <input type="text" id="haha">
+           <button id="showDetail">show more details</button>
+           <div id="detail" class="detailedBlock">
+                <img src="Capture.PNG" alt="">
+                <img src="Capture2.PNG" alt="">
+            </div>
 
             <hr class="hr">
             <label>Select the class type</label>
@@ -250,12 +227,12 @@
                 <option value="3">EMBEDDED</option>
             </select> <br><br>
             <p>
-                LABOR COST:<input type="text" placeholder="labour rate" id="LR" required="">$
+                Labor Cost:<input type="text" placeholder="labour rate" id="LR" required="">$
             </p>
             <p><button id="finalCal">Calculate Effort,time and cost</button></p>
             <div>
-                Effort:<input type="text" id="effort" placeholder="effort">P-M<br>
-                Time of dev.:<input type="text" id="time" placeholder="time">Months<br>
+                Effort applied:<input type="text" id="effort" placeholder="effort">P-M<br>
+                Development Time:<input type="text" id="time" placeholder="time">Months<br>
                 Cost:<input type="text" id="cost" placeholder="cost">$
 
             </div>
@@ -264,7 +241,7 @@
 
     </div>
 
-   
+</div>
  
 </body>
 
