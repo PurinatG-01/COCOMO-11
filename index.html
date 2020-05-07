@@ -1,49 +1,271 @@
 <html>
+
 <head>
     <title>COCOMO</title>
-    <script src="./main.js" type=""></script>
+    <script src="main.js" type="text/javascript"></script>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
+    
     <div class="body-wrapper">
         <h1>COCOMO and COQUALMO</h1>
-   
-    <div class="selected">
-      
-        <h2>Software project</h2>
-        <label for="organic">Organic</label>
-        <input name="project" id="organic" type="radio" value="organic" checked>
-        <label for="semi">Semi-detached</label>
-        <input name="project" id="semi" type="radio" value="semi" >
-        <label for="embed">Embedded</label>
-        <input name="project" id="embed" type="radio" value="embed" >
 
-    </div>
-    <div class="input-group cocomo-main">
-        <h3>Basic COCOMO</h3>
-        <label for="KLOC">Fill the KLOC number lines of code in the program</label>
-        <input type="text" id="KLOC" value="" >
-        <button id="cocomo-submit">Submit</button>
-        <div class="answesr">
-            <h4>Development Time (D)</h4>
-            <span class="dev-time">
-                0.00
-            </span>
-            <h4>People Required (P)</h4>
-            <span class="people-req">
-                0.00
-            </span>
+        <div class="selected">
+
+            <h2>Software project</h2>
+            <label for="organic">Organic</label>
+            <input name="project" id="organic" type="radio" value="organic" checked>
+            <label for="semi">Semi-detached</label>
+            <input name="project" id="semi" type="radio" value="semi">
+            <label for="embed">Embedded</label>
+            <input name="project" id="embed" type="radio" value="embed">
+
         </div>
+        <div class="input-group cocomo-main">
+            <h3>Basic COCOMO</h3>
+            <label for="KLOC">Fill the KLOC number lines of code in the program</label>
+            <input type="text" id="KLOC" value="">
+            <button id="cocomo-submit">Submit</button>
+            <div class="answesr">
+                <h4>Development Time (D)</h4>
+                <span class="dev-time">
+                    0.00
+                </span>
+                <h4>People Required (P)</h4>
+                <span class="people-req">
+                    0.00
+                </span>
+            </div>
+        </div>
+
+       <!-- *********************** cocomo 2 ************************************ -->
+        <div class="cocomo2-main">
+        
+            KLOC=<input type="text" id="kloc">
+            <br><br>
+            <strong><em>15 Software Cost Drivers</em></strong><br>
+            <p>
+                <strong>Product Attributes</strong><br>
+
+
+                <label>Requirement software reliability:</label>
+                <select id="cheked">
+                    <option value="0.75">Very low</option>
+                    <option value="0.88">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.15">high</option>
+                    <option value="1.40">Very high</option>
+                    <option value="1.50">Extremely high</option>
+                </select>
+                <br>
+                <label for="2">Size of application database</label>
+                <select name="2" id="2">
+                    <option value="0.75">Very low</option>
+                    <option value="0.94">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.08">high</option>
+                    <option value="1.16">Very high</option>
+                    <option value="1.30">Extremely high</option>
+                </select><br>
+                <label for="3">Complexity of the product</label>
+                <select name="3" id="3">
+                    <option value="0.75">Very low</option>
+                    <option value="0.85">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.15">high</option>
+                    <option value="1.30">Very high</option>
+                    <option value="1.65">Extremely high</option>
+                </select></p>
+
+            <p>
+                <strong>Hardware Attributes</strong>
+                <br> 
+                <label for="4">Run-time performance constraints</label>
+                <select name="4" id="4">
+                    <option value="0.75">Very low</option>
+                    <option value="0.88">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.15">high</option>
+                    <option value="1.40">Very high</option>
+                    <option value="1.50">Extremely high</option>
+                </select> <br>
+                <label for="5">Memory constraints</label>
+                <select name="5" id="5">
+                    <option value="0.75">Very low</option>
+                    <option value="0.88">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.15">high</option>
+                    <option value="1.40">Very high</option>
+                    <option value="1.50">Extremely high</option>
+                </select><br>
+                <label for="6">Volatality of virtual machines environment</label>
+                <select name="6" id="6">
+                    <option value="0.75">Very low</option>
+                    <option value="0.88">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.15">high</option>
+                    <option value="1.40">Very high</option>
+                    <option value="1.50">Extremely high</option>
+                </select><br>
+                <label for="7">Required turnabout time</label>
+                <select name="7" id="7">
+                    <option value="0.75">Very low</option>
+                    <option value="0.88">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="1.15">high</option>
+                    <option value="1.40">Very high</option>
+                    <option value="1.50">Extremely high</option>
+                </select>
+            </p>
+
+
+
+
+
+            <p>
+                <strong>Personnel Attributes:</strong><br>
+                <label for="8">Analyst capability</label>
+                <select name="8" id="8">
+                    <option value="1.46">Very low</option>
+                    <option value="1.19">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.86">high</option>
+                    <option value="0.71">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select><br>
+
+                <label for="9">Application experience</label>
+                <select name="9" id="9">
+                    <option value="1.29">Very low</option>
+                    <option value="1.13">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.91">high</option>
+                    <option value="0.82">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select><br>
+
+                <label for="10">Software engineering capability</label>
+                <select name="10" id="10">
+                    <option value="1.42">Very low</option>
+                    <option value="1.17">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.86">high</option>
+                    <option value="0.71">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select><br>
+                <label for="11">Virtual machine exprience</label>
+                <select name="11" id="11">
+                    <option value="1.21">Very low</option>
+                    <option value="1.10">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.90">high</option>
+                    <option value="0.71">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select><br>
+                <label for="12">Programming language experience</label>
+                <select name="12" id="12">
+                    <option value="1.14">Very low</option>
+                    <option value="1.07">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.95">high</option>
+                    <option value="0.71">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select><br>
+            </p>
+
+
+            <p>
+                <strong>Project Attributes</strong><br>
+                <label for="13">Application of software Engineering methods</label>
+                <select name="13" id="13">
+                    <option value="1.24">Very low</option>
+                    <option value="1.10">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.91">high</option>
+                    <option value="0.82">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select>
+                <label for="14">Use of software tools</label>
+                <select name="14" id="14">
+                    <option value="1.24">Very low</option>
+                    <option value="1.10">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.91">high</option>
+                    <option value="0.82">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select>
+                <label for="15">Required developement schedule</label>
+                <select name="15" id="15">
+                    <option value="1.24">Very low</option>
+                    <option value="1.10">low</option>
+                    <option value="1">Nominal</option>
+                    <option value="0.91">high</option>
+                    <option value="0.82">Very high</option>
+                    <option value="0.50">Extremely high</option>
+                </select>
+            </p>
+            <button id="showDetail">show more details</button>
+            <div id="detail" class="detailedBlock">
+                <p>requirement software reliability: Very Low= 0.75 Low=0.88 Nominal: 1.00 High= 1.15 Very High= 1.40
+                </p>
+                <p>size of application database: Very Low= 0.00 Low=0.94 Nominal: 1.00 High= 1.08 Very High= 1.16</p>
+                <p>complexity of the product: Very Low= 0.70 Low=0.85 Nominal: 1.00 High= 1.15 Very High= 1.30</p>
+
+
+                <p>run-time performance constraints: Very Low= 0.00 Low=0.00 Nominal: 1.00 High= 1.11 Very High= 1.30
+                </p>
+                <p>memory constraints: Very Low= 0.00 Low=0.00 Nominal: 1.00 High= 1.06 Very High= 1.21</p>
+                <p>volatality of virtual machines environment: Very Low= 0.00 Low=0.87 Nominal: 1.00 High= 1.15 Very
+                    High= 1.30</p>
+                <p>complexity of the product: Very Low= 0.00 Low=0.94 Nominal: 1.00 High= 1.17 Very High= 1.15</p>
+
+
+
+                <p>analyst capability: Very Low= 1.46 Low=1.19 Nominal: 1.00 High= 0.86 Very High= 0.71</p>
+                <p>application experience: Very Low= 1.29 Low=1.13 Nominal: 1.00 High= 0.91 Very High= 0.82</p>
+                <p>software engineering capability: Very Low= 1.42 Low=1.17 Nominal: 1.00 High= 0.86 Very High= 0.70</p>
+                <p>virtual machine experience: Very Low= 1.21 Low=1.10 Nominal: 1.00 High= 0.90 Very High= 0.00</p>
+                <p>programming language experience: Very Low= 1.14 Low=1.07 Nominal: 1.00 High= 0.95 Very High= 0.00</p>
+
+
+                <p>application of software engineering methods: Very Low= 1.24 Low=1.10 Nominal: 1.00 High= 0.91 Very
+                    High= 0.82</p>
+                <p>use of software tools: Very Low= 1.24 Low=1.10 Nominal: 1.00 High= 0.91 Very High= 0.83</p>
+                <p>required development schedule: Very Low= 1.23 Low=1.08 Nominal: 1.00 High= 1.04 Very High= 1.10</p>
+
+            </div>
+            <br>
+
+
+            <button id="calEAF">calculate EAF</button>
+            EAF=
+            <input type="text" id="haha">
+
+            <hr class="hr">
+            <label>Select the class type</label>
+            <select name="16" id="class">
+                <option value="1">ORGANIC</option>
+                <option value="2">SEMI-DETACHED</option>
+                <option value="3">EMBEDDED</option>
+            </select> <br><br>
+            <p>
+                LABOR COST:<input type="text" placeholder="labour rate" id="LR" required="">$
+            </p>
+            <p><button id="finalCal">Calculate Effort,time and cost</button></p>
+            <div>
+                Effort:<input type="text" id="effort" placeholder="effort">P-M<br>
+                Time of dev.:<input type="text" id="time" placeholder="time">Months<br>
+                Cost:<input type="text" id="cost" placeholder="cost">$
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="input-group cocomo2-main">
-
-    </div>
-
-    <div class="input-group coqualmo-main">
-
-    </div>
-</div>
-
+   
+ 
 </body>
+
 </html>
