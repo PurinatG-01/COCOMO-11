@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         var mult = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
       
-        document.getElementById("haha").value = mult
+        document.getElementById("eaf").value = mult
 
     })
     document.querySelector("#finalCal").addEventListener("click", () => {
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var z = Number(a.options[a.selectedIndex].value)
         console.log(z)
         if (z === 1) {
-            var fact = document.getElementById("haha").value
+            var fact = document.getElementById("eaf").value
             var bb = document.getElementById("kloc").value
             var Effort = 2.4 * ((bb) ^ (1.05)) * fact
 
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (z === 2) {
-            var fact = document.getElementById("haha").value
+            var fact = document.getElementById("eaf").value
             var bb = document.getElementById("kloc").value
             var Effort = 3.0 * ((bb) ^ (1.12)) * fact
             document.getElementById("effort").value = Effort
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (z === 3) {
-            var fact = document.getElementById("haha").value
+            var fact = document.getElementById("eaf").value
             var bb = document.getElementById("kloc").value
             var Effort = 3.6 * ((bb) ^ (1.20)) * fact
             document.getElementById("effort").value = Effort
