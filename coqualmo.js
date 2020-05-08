@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => { 
 
-        document.getElementById("btnReset").addEventListener("click", () => {
-                for(i=1;i<16;i++){
-                var dropDown = document.getElementById(i);
-                console.log(dropDown)
-                dropDown.selectedIndex = 0;  
-                }
-                
-        })
+        var totalDefect = 0
+        var result1 = 0
+        var result2 = 0
+        var result3 = 0
+        var defectA = 0
+        var defectB = 0
+        var defectC = 0
 
-        
         document.querySelector("#calQAF1").addEventListener("click", () => {
 
         var t = document.getElementById("1")
@@ -58,16 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
         var t15 = document.getElementById("15")
         var w15 = t15.options[t15.selectedIndex].value
 
-        var result = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
+        var result1 = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
         
-        console.log(result)
+        console.log(result1)
         
-        document.querySelector(".qafOfReq").textContent = result
+        document.querySelector(".qafOfReq").textContent = result1
 
+        })
 
-        
-})
-document.querySelector("#calQAF2").addEventListener("click", () => {
+        document.querySelector("#calQAF2").addEventListener("click", () => {
 
         var t = document.getElementById("1")
         var w = t.options[t.selectedIndex].value
@@ -115,18 +112,15 @@ document.querySelector("#calQAF2").addEventListener("click", () => {
         var t15 = document.getElementById("15")
         var w15 = t15.options[t15.selectedIndex].value
 
-        var result = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
+        var result2 = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
         
-        console.log(result)
+        console.log(result2)
         
-        document.querySelector(".qafOfDes").textContent = result
+        document.querySelector(".qafOfDes").textContent = result2
 
-        var options = document.querySelectorAll('.option');
-        for (var i = 0;i < 16; i++) {
-        options[i].selected = options[i].defaultSelected;
-}
-})
-document.querySelector("#calQAF3").addEventListener("click", () => {
+
+        })
+        document.querySelector("#calQAF3").addEventListener("click", () => {
 
         var t = document.getElementById("1")
         var w = t.options[t.selectedIndex].value
@@ -174,16 +168,69 @@ document.querySelector("#calQAF3").addEventListener("click", () => {
         var t15 = document.getElementById("15")
         var w15 = t15.options[t15.selectedIndex].value
 
-        var result = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
+        var result3 = (w * w1 * w2 * w3 * w4 * w6 * w7 * w8 * w9 * w10 * w11 * w12 * w13 * w14 * w15)
         
-        console.log(result)
+        console.log(result3)
         
-        document.querySelector(".qafOfCod").textContent = result
+        document.querySelector(".qafOfCod").textContent = result3
 
-        var options = document.querySelectorAll('.option');
-        for (var i = 0;i < 16; i++) {
-        options[i].selected = options[i].defaultSelected;
-}
-})
+        })
 
+        document.getElementById("computeDI1").addEventListener("click", () => {
+                console.log("Get: " + document.getElementById("resReq").textContent)
+                var qaf = parseFloat(document.getElementById("resReq").textContent)
+                console.log("QAF: " + qaf)
+                var a = parseFloat(document.getElementById("aOfReq").value)
+                var b = parseFloat(document.getElementById("bOfReq").value)
+                console.log("A: " + a)
+                console.log("B: " + b)
+                defectA = qaf * a * b
+                console.log(defectA)
+
+                document.querySelector(".resultReq").textContent = defectA
+        
+        })
+        document.getElementById("computeDI2").addEventListener("click", () => {
+                console.log("Get: " + document.getElementById("resDes").textContent)
+                var qaf = parseFloat(document.getElementById("resDes").textContent)
+                console.log("QAF: " + qaf)
+                var a = parseFloat(document.getElementById("aOfDes").value)
+                var b = parseFloat(document.getElementById("bOfDes").value)
+                console.log("A: " + a)
+                console.log("B: " + b)
+                defectB = qaf * a * b
+                console.log(defectB)
+
+                document.querySelector(".resultDes").textContent = defectB
+        
+        })
+        document.getElementById("computeDI3").addEventListener("click", () => {
+                console.log("Get: " + document.getElementById("resCod").textContent)
+                var qaf = parseFloat(document.getElementById("resCod").textContent)
+                console.log("QAF: " + qaf)
+                var a = parseFloat(document.getElementById("aOfCod").value)
+                var b = parseFloat(document.getElementById("bOfCod").value)
+                console.log("A: " + a)
+                console.log("B: " + b)
+                defectC = qaf * a * b
+                console.log(defectC)
+        
+                document.querySelector(".resultCod").textContent = defectC
+        })
+
+        document.getElementById("computeTotalDI").addEventListener("click", () => {
+                totalDefect = defectA + defectB + defectC
+                console.log("Total Defect: "+ totalDefect)
+
+                document.querySelector(".totalDefect").textContent = totalDefect
+        })
+
+        document.getElementById("btnReset").addEventListener("click", () => {
+                for(i=1;i<16;i++){
+                var dropDown = document.getElementById(i);
+                console.log(dropDown)
+                dropDown.selectedIndex = 0;  
+                }
+                
+        })
 })
