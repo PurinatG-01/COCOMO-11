@@ -273,5 +273,121 @@
         <h2>Total number of defectes:<span class="totalDefect"> 0 </span></h2>
         <input type="button" id="computeTotalDI" value="Compute Total DI"/>
    </div>
+   <div class="dre-wrapper">
+       <h1>Defect Removal</h1>
+        <div>
+            <h2>Requirement Phase</h2>
+            <label for="r-c-label">Calibration Constant</label>
+            <input type="text" name="r-c-label" id="R-C">
+            <br>
+            <label for="R-A">Automated Analysis</label>
+            <select name="R-A" id="R-A">
+                <option value="0.00" selected="selected">Very Low</option>
+                <option value="0.00">Low</option>
+                <option value="0.10">Nominal</option>
+                <option value="0.27">High</option>
+                <option value="0.34">Very high</option>
+                <option value="0.40">Extra High</option>
+            </select>
+            <label for="R-P">People Reviews</label>
+            <select name="R-P" id="R-P">
+                <option value="0.00" selected="selected">Very Low</option>
+                <option value="0.25">Low</option>
+                <option value="0.40">Nominal</option>
+                <option value="0.50">High</option>
+                <option value="0.58">Very high</option>
+                <option value="0.70">Extra High</option>
+            </select>
+            <label for="R-E">Execution Testing and Tools</label>
+                <select name="R-E" id="R-E">
+                    <option value="0.00" selected="selected">Very Low</option>
+                    <option value="0.23">Low</option>
+                    <option value="0.40">Nominal</option>
+                    <option value="0.50">High</option>
+                    <option value="0.57">Very high</option>
+                    <option value="0.60">Extra High</option>
+            </select>
+            <br>
+            <h4>Estimated number of residual defects : <span class="result-req-dre">0.0</span></h4>
+        </div>
+            <br>
+        <div>
+            <h2>Design Phase</h2>
+            <label for="d-c-label">Calibration Constant</label>
+            <input type="text" name="d-c-label" id="D-C">
+            <br>
+            <label for="D-A">Automated Analysis</label>
+            <select name="D-A" id="D-A">
+                <option value="0.00" selected="selected">Very Low</option>
+                <option value="0.00">Low</option>
+                <option value="0.13">Nominal</option>
+                <option value="0.28">High</option>
+                <option value="0.44">Very high</option>
+                <option value="0.50">Extra High</option>
+            </select>
+            <label for="D-P">People Reviews</label>
+            <select name="D-P" id="D-P">
+                <option value="0.00" selected="selected">Very Low</option>
+                <option value="0.28">Low</option>
+                <option value="0.40">Nominal</option>
+                <option value="0.54">High</option>
+                <option value="0.70">Very high</option>
+                <option value="0.78">Extra High</option>
+            </select>
+            <label for="D-E">Execution Testing and Tools</label>
+                <select name="D-E" id="D-E">
+                    <option value="0.00" selected="selected">Very Low</option>
+                    <option value="0.23">Low</option>
+                    <option value="0.43">Nominal</option>
+                    <option value="0.54">High</option>
+                    <option value="0.65">Very high</option>
+                    <option value="0.70">Extra High</option>
+            </select>
+            <br>
+            <h4>Estimated number of residual defects : <span class="result-des-dre">0.0</span></h4>
+        </div>
+        <div>
+            <br>
+            <h2>Code Phase</h2>
+            <label for="c-c-label">Calibration Constant</label>
+            <input type="text" name="c-c-label" id="C-C">
+            <br>
+            <label for="C-A">Automated Analysis</label>
+            <select name="C-A" id="C-A">
+                <option value="0.00" selected="selected">Very Low</option>
+                <option value="0.10">Low</option>
+                <option value="0.20">Nominal</option>
+                <option value="0.30">High</option>
+                <option value="0.48">Very high</option>
+                <option value="0.55">Extra High</option>
+            </select>
+            <label for="C-P">People Reviews</label>
+            <select name="C-P" id="C-P">
+                <option value="0.00" selected="selected">Very Low</option>
+                <option value="0.30">Low</option>
+                <option value="0.48">Nominal</option>
+                <option value="0.60">High</option>
+                <option value="0.73">Very high</option>
+                <option value="0.83">Extra High</option>
+            </select>
+            <label for="C-E">Execution Testing and Tools</label>
+                <select name="C-E" id="C-E">
+                    <option value="0.00" selected="selected">Very Low</option>
+                    <option value="0.38">Low</option>
+                    <option value="0.58">Nominal</option>
+                    <option value="0.69">High</option>
+                    <option value="0.78">Very high</option>
+                    <option value="0.88">Extra High</option>
+            </select>
+            <br>
+            <h4>Estimated number of residual defects : <span class="result-code-dre">0.0</span></h4>
+        </div>
+        <br>
+        <input type="button" id="computeDRE" value="Compute DRE"/>
+        <input type="button" id="reset-dre-button" value="Reset DRE">
+        <h2>Total Defect Removal (Reqirement, Design, Code) : <span class="total-result-dre">0.0</span></h2>
+
+   </div>
+
     </body>
 </html>

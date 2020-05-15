@@ -481,4 +481,82 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 
         })
+        // ================ DRE ================
+        document.querySelector("#computeDRE").addEventListener("click",()=>{
+
+                var rDre = 0
+                var dDre = 0
+                var cDre = 0
+
+                var rc = parseFloat(document.querySelector("#R-C").value)
+                var dc = parseFloat(document.querySelector("#D-C").value)
+                var cc = parseFloat(document.querySelector("#C-C").value)
+
+                // Requirement
+                var raOb = document.querySelector("#R-A")
+                var ra = parseFloat(raOb.options[raOb.selectedIndex].value)
+                var rpOb = document.querySelector("#R-P")
+                var rp = parseFloat(rpOb.options[rpOb.selectedIndex].value)
+                var reOb = document.querySelector("#R-E")
+                var re = parseFloat(reOb.options[reOb.selectedIndex].value)
+                var term1 = (1-ra)*(1-rp)*(1-re)
+                var dreReq = rc*defectA*term1
+                document.querySelector(".result-req-dre").textContent = dreReq
+                // Design
+                var daOb = document.querySelector("#D-A")
+                var da = parseFloat(daOb.options[daOb.selectedIndex].value)
+                var dpOb = document.querySelector("#D-P")
+                var dp = parseFloat(dpOb.options[dpOb.selectedIndex].value)
+                var deOb = document.querySelector("#D-E")
+                var de = parseFloat(deOb.options[deOb.selectedIndex].value)
+                var term2 = (1-da)*(1-dp)*(1-de)
+                var dreDes = dc*defectB*term2
+                document.querySelector(".result-des-dre").textContent = dreDes
+                // Code
+                var caOb = document.querySelector("#C-A")
+                var ca = parseFloat(caOb.options[caOb.selectedIndex].value)
+                var cpOb = document.querySelector("#C-P")
+                var cp = parseFloat(cpOb.options[cpOb.selectedIndex].value)
+                var ceOb = document.querySelector("#C-E")
+                var ce = parseFloat(ceOb.options[ceOb.selectedIndex].value)
+                var term3 = (1-ca)*(1-cp)*(1-ce)
+                var dreCode = cc*defectC*term3
+                document.querySelector(".result-code-dre").textContent = dreCode
+
+                document.querySelector(".total-result-dre").textContent = dreCode+dreDes+dreReq
+
+
+
+        })
+
+        document.querySelector("#reset-dre-button").addEventListener("click", ()=>{
+                document.querySelector(".result-req-dre").textContent = "0.0"
+                document.querySelector(".result-des-dre").textContent = "0.0"
+                document.querySelector(".result-code-dre").textContent = "0.0"
+                document.querySelector(".total-result-dre").textContent = "0.0"
+
+
+                document.querySelector("#R-C").value = ""
+                document.querySelector("#R-A").options[0].selected = true
+                document.querySelector("#R-P").options[0].selected = true
+                document.querySelector("#R-E").options[0].selected = true
+                
+                document.querySelector("#D-C").value = ""
+                document.querySelector("#D-A").options[0].selected = true
+                document.querySelector("#D-P").options[0].selected = true
+                document.querySelector("#D-E").options[0].selected = true
+
+                document.querySelector("#C-C").value = ""
+                document.querySelector("#C-A").options[0].selected = true
+                document.querySelector("#C-P").options[0].selected = true
+                document.querySelector("#C-E").options[0].selected = true
+              
+
+
+        })
+
+        
+
+
+
 })
